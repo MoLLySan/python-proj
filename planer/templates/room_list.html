@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list of rooms</title>
+</head>
+<body>
+    {% for room in rooms %}
+        <div>
+            <h1>{{room.name}}</h1>
+            <p>{{ room.floor }}</p>
+            <p>{{ room.room_number }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>

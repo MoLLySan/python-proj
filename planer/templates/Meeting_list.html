@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>meetings</title>
+</head>
+<body>
+
+    {% for meet in Meetings %}
+        <div>
+            <h1>{{meet.title}}</h1>
+            <p>{{ meet.date }}</p>
+            <p>{{ meet.start_time }}</p>
+            <p>{{ meet.end_time }}</p>
+            <p>{{ meet.room }}</p>
+        </div>
+    {% endfor %}
+
+</body>
+</html>
