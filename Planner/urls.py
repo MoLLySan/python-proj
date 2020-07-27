@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from planer.views import room_list , Meeting_list, Meeting_room_list
+from planer.views import room_list , Meeting_list, Meeting_room_list, meet_create
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('room_list/', room_list),
     path('meeting_list/', Meeting_list),
-    path('meeting_list/<slug:room_name>', Meeting_room_list),
+    path('meeting_list/<int:r_id>', Meeting_room_list,name='Meeting_room_list'),
+    path("create_meet/", meet_create)
 ]

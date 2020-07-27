@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>make meet</title>
 </head>
 <body>
-$END$
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit">
+</form>
 </body>
 </html>
